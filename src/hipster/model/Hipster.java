@@ -6,6 +6,7 @@ public class Hipster
 	private String [] hipsterPhrases;
 	private Book [] hipsterBooks;
 	
+
 	public Hipster()
 	{
 		this.name = "";
@@ -34,7 +35,7 @@ public class Hipster
 		firstBook.setPageCount(6000);
 		firstBook.setPrice(89.99);
 		
-		secondBook = new Book(361, "Rick Riordan", "The Last Olympian", "Fantasy", 19.99);
+		secondBook = new Book(361, "Rick Riordan", "Fantasy", "The Last Olympian", 19.99);
 		
 		
 		thirdBook = new Book();
@@ -72,5 +73,15 @@ public class Hipster
 	public void setHipsterPhrases(String[] hipsterPhrases)
 	{
 		this.hipsterPhrases = hipsterPhrases;
+	}
+	
+	public Book[] getHipsterBooks()
+	{
+		return hipsterBooks;
+	}
+
+	public void setHipsterBooks(Book[] hipsterBooks)
+	{
+		this.hipsterBooks = hipsterBooks;
 	}
 }
