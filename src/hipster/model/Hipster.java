@@ -4,14 +4,16 @@ public class Hipster
 {
 	private String name;
 	private String [] hipsterPhrases;
-//  private Book [] hipsterBooks;
+	private Book [] hipsterBooks;
 	
+
 	public Hipster()
 	{
 		this.name = "";
 		this.hipsterPhrases = new String[5];
+		this.hipsterBooks = new Book[3];
 		setupArray();
-//		setupBooks();
+		setupBooks();
 	}
 	
 	private void setupArray()
@@ -23,14 +25,34 @@ public class Hipster
 		hipsterPhrases[4] = "I actually listen to good music like Sir mixalot unlike people from my generation who listen to crap like Guy Fieri";
 	}
 	
-	private void setupbooks()
+	private void setupBooks()
 	{
+		Book firstBook, secondBook, thirdBook;
+		firstBook = new Book();
+		firstBook.setAuthor("Neal Stephenson");
+		firstBook.setTitle("Diamonds in the rough");
+		firstBook.setSubject("Autobiography");
+		firstBook.setPageCount(6000);
+		firstBook.setPrice(89.99);
 		
+		secondBook = new Book(361, "Rick Riordan", "Fantasy", "The Last Olympian", 19.99);
+		
+		
+		thirdBook = new Book();
+		thirdBook.setAuthor("Shaun Weasley");
+		thirdBook.setTitle("Mastering the 'Magic' of Sandbagging");
+		thirdBook.setSubject("Documentary");
+		thirdBook.setPageCount(34696);
+		thirdBook.setPrice(120);
+		
+		hipsterBooks[0] = firstBook;
+		hipsterBooks[1] = secondBook;
+		hipsterBooks[2] = thirdBook;
 	}
 	
 	public Hipster(String name)
 	{
-		
+		this.name = name;
 	}
 	
 	public String getName()
@@ -51,5 +73,15 @@ public class Hipster
 	public void setHipsterPhrases(String[] hipsterPhrases)
 	{
 		this.hipsterPhrases = hipsterPhrases;
+	}
+	
+	public Book[] getHipsterBooks()
+	{
+		return hipsterBooks;
+	}
+
+	public void setHipsterBooks(Book[] hipsterBooks)
+	{
+		this.hipsterBooks = hipsterBooks;
 	}
 }
