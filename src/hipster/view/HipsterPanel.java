@@ -11,7 +11,7 @@ public class HipsterPanel extends JPanel
 {
 	private HipsterController hipController;
 	private JButton changeBookButton;
-	private JTextField hipField;
+//	private JTextField hipField;
 	private SpringLayout hipLayout;
 	private JComboBox<String> phraseComboBox;
 	private JLabel bookAuthorLabel;
